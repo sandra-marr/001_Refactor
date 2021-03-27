@@ -1,26 +1,12 @@
-# Homework01
-
-## Below is the content from the "README.md" file from the class repo.
+# Homework01 - SRM
 
 # 01 HTML, CSS, and Git: Code Refactor
 
-## Your Task
+## Summary
 
-Be sure to review the [Homework Guide](./Homework-Guide/README.md) before you start working on this assignment! This week is an odd-numbered week, so your homework is an on-the-job ticket&mdash;meaning that you'll begin with starter code that you need to modify. 
+The purpose of this project was to review and update the existing code to improve accessibility for web users and readability of the code for any future developers. Generally, the look and functionality of the website was intended to remain unchanged. The user story and acceptance criteria is listed below: 
 
-**Refactoring** existing code (improving it without changing what it does) to meet a certain set of standards or to implement a new technology is a common task for front-end and junior developers. For this particular homework assignment, a marketing agency has hired you to refactor an existing site to make it more accessible. 
-
-> **Important**: When working with someone else's code, you should adhere to the **Scout Rule**&mdash;always leave the code a little cleaner than when you found it.
-
-An increasingly important consideration for businesses, web **accessibility** ensures that people with disabilities can access a website using assistive technologies like video captions, screen readers, and braille keyboards. Accessibility is good for business&mdash;for one thing, accessible sites rank higher in search engines like Google. It also helps companies avoid litigation, which might arise if people with disabilities can't access a website.
-
-Accessibility can include complex requirements, but your tech lead has given you a small list of specific criteria for this project. These criteria are documented in the Acceptance Criteria section.
-
-To impress clients, you should always exceed expectations and improve the codebase for long-term sustainability. For example, check that all links are functioning correctly. You can also increase the efficiency of the CSS by consolidating the selectors and properties, organizing them to follow the semantic structure of the HTML elements, and including comments before each element or section of the page.
-
-Are you ready to begin? Here are this week's homework requirements.
-
-## User Story
+### User Story
 
 ```
 AS A marketing agency
@@ -28,7 +14,7 @@ I WANT a codebase that follows accessibility standards
 SO THAT our own site is optimized for search engines
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 ```
 GIVEN a webpage meets accessibility standards
@@ -44,81 +30,31 @@ WHEN I view the title element
 THEN I find a concise, descriptive title
 ```
 
-## Mock-Up
+## HTML Analysis
 
-The following image shows the web application's appearance and functionality:
+The overall structure of the HTML was good, however there was a need for improved semantics. Rather than using only `<div>` elements, I focused on adding in `<header>`, `<nav>`, `<section>`, `<aside>`, and `<footer>` elements where applicable. These changes also made it possible to remove some class attributes (i.e. instead of having a class="header", we could use the `<header>` element).
+
+Without more knowledge of the intent that the business had for the images used in their webpage, it appeared that the images were for visual aesthetics only, so alt tags were added but left blank. 
+
+There was also some clean up on the links internal to this webpage. This was done by adding in id attributes to any sections that were previously missing them.
+
+The content of the page did not change with any of these updates. 
+
+## CSS Analysis
+
+The first round of updates made to the CSS file were related to the semantic updates made in the HTML file.
+One example of this was to change class selectors to element selectors. 
+
+Another area of improvement was in the redundant styles in the CSS file. To simplify the CSS, ids and classes were cleaned up in the HTML file, and then the selectors in CSS were updated to reflect those changes. For example, rather than having three identical style blocks for the benefit class headers, now there is only one. 
+
+At each stage in making updates, the webpage was opened, refreshed, and inspected inorder to ensure that the over all look and functionality did not change. 
+
+## Inspect - What a great tool!
+
+The major benefit to this first assignment that I found was the ability to learn how to navigate the inspect tool in chrome. As I was making changes, and getting stuck, the inspect tool really helped me to understand what was happening. I also learned about Lighthouse to assess the accessibility, speed, SOE, etc. That seems like a great learning tool. 
+
+## End Result
+If done correctly, the webpage for Horiseon should look like this:
 
 ![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](./Assets/images/01-html-css-git-homework-demo.png)
 
-> **Note**: This layout is designed for desktop viewing, so you may notice that some of the elements don't look like the mock-up at a resolution smaller than 768px. Eventually you'll learn how to make elements responsive so that your web application is optimized for any screen size.
-
-## Getting Started
-
-Follow these instructions to create your project and deploy it to GitHub Pages:
-
-1. Create a new repository on your GitHub account and clone it to your computer.
-
-2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
-
-3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
-
-4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
-
-5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
-
-You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
-
-> **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an inccorect capital or lowercase letter could cause problems in deployment.
-
-Be sure to add, commit, and push your work to see the most up-to-date version of your app!
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following code improvements:
-
-  * Application's links all function correctly.
-
-  * Application's CSS selectors and properties are consolidated and organized to follow semantic structure.
-
-  * Application's CSS file is properly commented.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application resembles mock-up provided in the homework instructions (at least 90%).
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README that describes the project.
-
----
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
