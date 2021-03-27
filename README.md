@@ -56,5 +56,5 @@ The major benefit to this first assignment that I found was the ability to learn
 ## End Result
 If done correctly, the webpage for Horiseon should look like this:
 
-![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](./Assets/images/01-html-css-git-homework-demo.png)
+![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](/assets/01-html-css-git-homework-demo.png)
 
