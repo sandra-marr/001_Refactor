@@ -54,7 +54,7 @@ At each stage in making updates, the webpage was opened, refreshed, and inspecte
 The major benefit to this first assignment that I found was the ability to learn how to navigate the inspect tool in chrome. As I was making changes, and getting stuck, the inspect tool really helped me to understand what was happening. I also learned about Lighthouse to assess the accessibility, speed, SOE, etc. That seems like a great learning tool. 
 
 ## End Result
-Here is a link to the deployed page: https://sandra-marr.github.io/Homework01/
+Here is a link to the deployed page: https://sandra-marr.github.io/001_Refactor/
 
 If done correctly, the webpage for Horiseon should look like this:
 
